@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bloomn</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: black;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1522383225653-ed111181a951?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* HERO OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+    z-index: 1;
+}
+
+/* STORY SECTION */
+.story {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.story::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.story-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    color: white;
+}
+
+.story-content h2 {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* PRODUCTS SECTION */
+.products-section {
+    position: relative;
+    padding: 120px 50px;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?q=80&w=1600') center/cover no-repeat;
+}
+
+.products-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.products-section * {
+    position: relative;
+    z-index: 1;
+}
+
+.products-title {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    max-width: 250px;
+    color: white;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* BUTTON */
+.product button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background: #ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div>
+      <p>Bloomn</p>
+      <p>&nbsp;</p>
+    </div>
+
+	    <div>
+	      <p>The Art Of Blossoms</p>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+        </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">THE ART OF BLOSSOMS</div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-content">
+    <h2>OUR STORY</h2>
+    <p>Bloomn was created with one goal in mind: Create something never seen before, and we did</p>
+      <p>This website you are seeing is trying to show the industry of clothing and website designing that we as students can also create something as impactful as there large brands, and although we don't have the time and budget as them. Bloomn has something that they don't and that is love for the brand, and the love of which we have for our brand. That's what makes Bloomn stand out from our competitors.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+    <div class="products-title">Your dream awaits.&nbsp;&nbsp;</div>
+
+    <div class="products">
+
+        <div class="product">
+<h3>Cherry Blossom</h3>
+            <p>$29.99</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+           
+            <h3>Rose Bouquet</h3>
+            <p>$39.99</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+           
+            <h3>Spring Mix</h3>
+            <p>$34.99</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
