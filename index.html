@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloomn</title>
 
 <style>
@@ -14,6 +15,7 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
     background: black;
+    color: white;
 }
 
 /* NAV */
@@ -92,6 +94,55 @@ nav {
     opacity: 0.8;
 }
 
+/* CREATORS QUOTES SECTION */
+.creators-quotes {
+    padding: 100px 50px;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.creators-quotes h2 {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.quotes-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quote-card {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 15px;
+    line-height: 1.6;
+    font-style: italic;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
 /* PRODUCTS SECTION */
 .products-section {
     position: relative;
@@ -119,57 +170,87 @@ nav {
     margin-bottom: 60px;
 }
 
-/* PRODUCTS GRID */
+/* IMPROVED PRODUCTS GRID */
 .products {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    max-width: 250px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 0 25px 0; /* Clear padding for modern look */
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    width: 280px;
     color: white;
     text-align: center;
+    overflow: hidden; /* Clips the image hover scale scaling inside the card */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.product-img-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #111;
 }
 
 .product img {
     width: 100%;
-    transition: transform 0.5s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.product img:hover {
-    transform: scale(1.05);
+.product:hover img {
+    transform: scale(1.1);
 }
 
 .product h3 {
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.product .price {
+    margin-top: 8px;
     font-size: 14px;
+    font-weight: bold;
+    opacity: 0.9;
+    color: #e0e0e0;
 }
 
-.product p {
-    margin-top: 10px;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-/* BUTTON */
+/* IMPROVED BUTTON */
 .product button {
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 35px;
     background: white;
+    color: black;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .product button:hover {
-    background: #ddd;
+    background: black;
+    color: white;
+    box-shadow: 0 0 0 1px white inset;
 }
 
 </style>
@@ -180,14 +261,10 @@ nav {
 <nav>
     <div>
       <p>Bloomn</p>
-      <p>&nbsp;</p>
     </div>
-
-	    <div>
-	      <p>The Art Of Blossoms</p>
-	      <p>&nbsp;</p>
-	      <p>&nbsp;</p>
-        </div>
+  <div>
+    <p>The Art Of Blossoms</p>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -199,34 +276,58 @@ nav {
 <section class="story">
   <div class="story-content">
     <h2>OUR STORY</h2>
-    <p>Bloomn was created with one goal in mind: Create something never seen before, and we did</p>
-      <p>exactly that! This website you are seeing is trying to show the industry of clothing and website designing that we as students can also create something as impactful as there large brands, and although we don't have the time and budget as them. Bloomn has something that they don't and that is love for the brand, and the love of which we have for our brand. That's what makes Bloomn stand out from our competitors.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+    <p>Bloomn was created with one goal in mind: Create something never seen before, and we did exactly that! This website you are seeing is trying to show the industry of clothing and website designing that we as students can also create something as impactful as there large brands, and although we don't have the time and budget as them. Bloomn has something that they don't and that is love for the brand, and the love of which we have for our brand. That's what makes Bloomn stand out from our competitors.</p>
   </div>
+</section>
+
+<!-- CREATORS QUOTES SECTION -->
+<section class="creators-quotes">
+    <h2>FOUNDERS QUOTES ON BLOOMN</h2>
+    <div class="quotes-container">
+        <div class="quote-card">
+            <p class="quote-text">"We built Bloomn on one sole idea and that was to show the industry of website and product designing that popularity doesn't mean your better. It's the effort and love for the something that defines your growth"&nbsp; &nbsp;&nbsp;</p>
+            <p class="quote-author">— Daniel, Co-Founder</p>
+      </div>
+        <div class="quote-card">
+            <p class="quote-text">""</p>
+            <p class="quote-author">— Liam, Co-Founder</p>
+        </div>
+    </div>
 </section>
 
 <!-- PRODUCTS -->
 <section class="products-section">
-    <div class="products-title">Your dream awaits.&nbsp;&nbsp;</div>
+    <div class="products-title">Your dream awaits.</div>
 
     <div class="products">
 
-        <div class="product">
-<h3>Cherry Blossom</h3>
-            <p>$29.99</p>
+        <!-- Product 1 -->
+      <div class="product">
+        <div class="product-img-wrapper">
+  
+            </div>
+        <h3>Cherry Blossom</h3>
+            <p class="price">$29.99</p>
             <button>Buy Now</button>
         </div>
 
-        <div class="product">
-           
-            <h3>Rose Bouquet</h3>
-            <p>$39.99</p>
+        <!-- Product 2 -->
+      <div class="product">
+            <div class="product-img-wrapper">
+
+            </div>
+        <h3>Rose Bouquet</h3>
+            <p class="price">$39.99</p>
             <button>Buy Now</button>
         </div>
 
-        <div class="product">
-           
-            <h3>Spring Mix</h3>
-            <p>$34.99</p>
+        <!-- Product 3 -->
+      <div class="product">
+            <div class="product-img-wrapper">
+
+            </div>
+        <h3>Spring Mix</h3>
+            <p class="price">$34.99</p>
             <button>Buy Now</button>
         </div>
 
